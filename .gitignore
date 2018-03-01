@@ -103,3 +103,4 @@ ENV/
 # vim and ctags
 tags
 *~
+.idea/

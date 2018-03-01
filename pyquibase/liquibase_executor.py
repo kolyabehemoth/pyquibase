@@ -65,7 +65,7 @@ class LiquibaseExecutor(object):
   
     self.config       = config
     self.db           = SUPPORTED_DATABASES[config['database']]
-    self.liquibaseJar = resource_filename(__package__, "liquibase/liquibase.jar")
+    self.liquibaseJar = resource_filename(__package__, "liquibase/liquibase-core-3.5.4.jar")
     self.logger       = logging.getLogger(__name__)
 
   def execute(self, changeLogFilePath, *args): 

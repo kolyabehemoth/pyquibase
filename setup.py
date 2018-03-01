@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name             = 'pyquibase',
-    version          = '1.0',
+    version          = '1.0.1',
     description      = 'Python wrapper for liquibase',
     author           = 'Eun Woo Song',
     author_email     = 'songew@gmail.com',
@@ -16,7 +16,8 @@ setup(
         'pyquibase' : [
             'db-connectors/sqlite-jdbc-3.18.0.jar',
             'db-connectors/mysql-connector-java-5.1.42-bin.jar',
-            'liquibase/liquibase.jar'
+            'db-connectors/postgresql-42.1.3.jar',
+            'liquibase/liquibase-core-3.5.4.jar'
     ]},
     zip_safe=False,
     classifiers      = [
