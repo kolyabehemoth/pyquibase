@@ -24,6 +24,7 @@ LIQUIBASE_COMMAND = """java -jar %s \
     --url="%s" \
     --username=%s \
     --password=%s \
+    --logFile=%s \
     --logLevel=%s \
 """
 
@@ -82,6 +83,7 @@ class LiquibaseExecutor(object):
               url,
               config['username'],
               config['password'],
+              config['log_file'],
               config['log_level']
           )
       else:

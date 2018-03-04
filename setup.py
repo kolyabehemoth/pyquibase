@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name             = 'pyquibase',
-    version          = '1.0.1',
+    version          = '1.0.2',
     description      = 'Python wrapper for liquibase',
     author           = 'Eun Woo Song',
     author_email     = 'songew@gmail.com',

@@ -16,6 +16,7 @@ import logging
 
 from pyquibase.liquibase_executor import LiquibaseExecutor
 
+
 class Pyquibase(object):
     def __init__(self, config):
         self.liquibase       = LiquibaseExecutor(config)
@@ -23,7 +24,7 @@ class Pyquibase(object):
         self.logger          = logging.getLogger(__name__)
 
     @classmethod
-    def mysql(cls, host, port, db_name, username, password, change_log_file, log_level = 'info'):
+    def mysql(cls, host, port, db_name, username, password, change_log_file, log_file, log_level = 'info'):
         config = { 
             'host'            : host,
             'port'            : port,
@@ -32,13 +33,14 @@ class Pyquibase(object):
             'password'        : password,
             'change_log_file' : change_log_file,
             'log_level'       : log_level,
+            'log_file'        : log_file,
             'database'        : 'mysql'
         }
 
         return cls(config)
 
     @classmethod
-    def postgresql(cls, host, port, db_name, username, password, change_log_file, log_level = 'info'):
+    def postgresql(cls, host, port, db_name, username, password, change_log_file, log_file, log_level = 'info'):
         config = { 
             'host'            : host,
             'port'            : port,
@@ -47,18 +49,19 @@ class Pyquibase(object):
             'password'        : password,
             'change_log_file' : change_log_file,
             'log_level'       : log_level,
+            'log_file'        : log_file,
             'database'        : 'postgresql'
         }
 
         return cls(config)
 
-
     @classmethod
-    def sqlite(cls, db_name, change_log_file, log_level = 'info'):
+    def sqlite(cls, db_name, change_log_file, log_file, log_level = 'info'):
         config = {
             'db_name'         : db_name,
             'change_log_file' : change_log_file,
             'log_level'       : log_level,
+            'log_file'        : log_file,
             'database'        : 'sqlite'
         }
 
